@@ -1,18 +1,10 @@
 # run these on the AWS CLI after having configured it to use the Administrator identity
-
-
 aws ec2 run-instances --image-id ami-00fa2b3c5f030bb68 --security-group-ids sg-00f635dd91928343e --count 1 --instance-type i3.xlarge --key-name Anaconda --subnet-id subnet-3218ee44 --query "Instances[0].InstanceId"
-	
 aws ec2 create-volume --size 100 --region ap-southeast-2 --availability-zone ap-southeast-2a --volume-type gp2 
-#--tag-specifications 'ResourceType=volume,Tags=[{Key=Name,Value=DL-datasets-checkpoints}]'
-	
 aws ec2 attach-volume --volume-id vol-0f02ca5ca0072eca8 --instance-id i-0ac91fe0540d55aea --device /dev/sdf
-
 
 # run these commands on the box.
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
-
-
 
 sudo mkdir /dltraining
 sudo mkfs -t ext4 /dev/xvdf
@@ -20,8 +12,6 @@ sudo mount /dev/xvdf /dltraining
 sudo chown -R ec2-user: /dltraining/
 cd /dltraining
 mkdir datasets
-#mkdir checkpoints
-
 
 jupyter notebook --generate-config
 vim /home/ec2-user/.jupyter/jupyter_notebook_config.py
@@ -33,6 +23,7 @@ c.NotebookApp.notebook_dir = '/dltraining'
 
 
 conda install -c bioconda p7zip
+conda install -c anaconda pymysql
 
 #Python
 import urllib.request
@@ -44,6 +35,9 @@ cd /dltraining/datasets/Trip\ Data
 7za e trip_data.7z
 
 cd /dltraining/datasets/Trip\ Fare
-7za e trip_data.7z
+7za e trip_fare.7z
+
+
+
 
 	
