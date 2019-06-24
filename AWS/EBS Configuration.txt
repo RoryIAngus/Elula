@@ -21,9 +21,19 @@ vim /home/ec2-user/.jupyter/jupyter_notebook_config.py
 c.NotebookApp.notebook_dir = '/dltraining'
 
 
-
+# conda install -c conda-forge shapely 
+# conda install -c conda-forge pyshp
 conda install -c bioconda p7zip
 conda install -c anaconda pymysql
+conda install -c anaconda pandas-profiling
+conda install -c conda-forge geopy
+conda install -c conda-forge fiona 
+
+
+
+pip install pygeocoder
+
+
 
 #Python
 import urllib.request
