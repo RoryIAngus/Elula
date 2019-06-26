@@ -20,3 +20,6 @@ https://www.kaggle.com/breemen/nyc-taxi-fare-data-exploration
 http://hafen.github.io/taxi/#initial-exploration
 
 https://chih-ling-hsu.github.io/2018/05/14/NYC
+
+## Post for setting up AWS to us spot instances
+https://aws.amazon.com/blogs/machine-learning/train-deep-learning-models-on-gpus-using-amazon-ec2-spot-instances/
