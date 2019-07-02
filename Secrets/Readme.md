@@ -8,6 +8,9 @@ This is going to be left open in case others want to see how I have done it.
 
 Ensure that the following is added to your .gitignore file to ensure that they are never checked in to a repo. Make sure that you back them up in a different way that is secure.
 
+## Note
+Using a % sign in one of the values does not work.
+
 
 ## Links
 I found the following helpful in my research
