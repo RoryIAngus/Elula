@@ -15,5 +15,7 @@ Using a % sign in one of the values does not work.
 ## Links
 I found the following helpful in my research
 
+https://docs.python.org/3/library/configparser.html
+
 https://stackoverflow.com/questions/5055042/whats-the-best-practice-using-a-settings-file-in-python/5056829#5056829
 https://stackoverflow.com/questions/52293453/how-to-keep-secret-key-information-out-of-git-repository
