@@ -12,6 +12,9 @@
 /SECRET/
 #
 
+# Office Temp Files
+~$*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
