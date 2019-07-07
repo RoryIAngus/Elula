@@ -1,3 +1,18 @@
+# Security Section
+#
+# This line needs to be uncommented on a real solution to ensure that the passwords are not synced to a git repo.
+# Make sure they are backed up using a different method.
+# passwords.ini
+# This will ensure that anything in the secrets folder is ignored as well as any folder called secret or its derivitives
+# /Secrets/
+/secrets/
+/SECRETES/
+/Secret/
+/secret/
+/SECRET/
+#
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
