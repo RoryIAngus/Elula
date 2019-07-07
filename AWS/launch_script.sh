@@ -98,3 +98,4 @@ conda install -seaborn
 pip install pygeocoder
 conda install -c anaconda configparser
 conda install -c conda-forge yapf
+conda install -c conda-forge dask
