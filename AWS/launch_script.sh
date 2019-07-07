@@ -39,13 +39,13 @@ sed -i "s/#c.NotebookApp.notebook_dir = ''/c.NotebookApp.notebook_dir = '\/dltra
 
 #conda stuff
 # conda install conda-build
-conda update conda-build
-conda update conda
-conda install -c anaconda git
-conda install nb_conda
-conda install nb_conda_kernels  # this is needed to help manage the kernals that I need
-conda install -c conda-forge jupyter_contrib_nbextensions
-conda install -c conda-forge ipywidgets
+#conda update conda-build -y
+conda update conda -y
+conda install -c anaconda git -y
+conda install nb_conda -y
+conda install nb_conda_kernels -y  # this is needed to help manage the kernals that I need
+conda install -c conda-forge jupyter_contrib_nbextensions -y
+conda install -c conda-forge ipywidgets -y
 # create a environment to leave base default
 conda create --name working
 conda activate working
@@ -55,7 +55,8 @@ conda activate working
 screen -d -m -S Jupyter
 # execute the commands in the "" Add a new line character to sumilate pressing enter
 # this creates a notebook that can run Python at the address http://127.0.0.1:8888/tree
-screen -S Jupyter -p 0 -X stuff "jupyter notebook\n"
+screen -S Jupyter -p 0 -X stuff "jupyter notebook
+"
 
 # screen manual https://www.gnu.org/software/screen/manual/screen.html
 # use this website to change the screenrs file so that it is not resized when the window is connected to https://superuser.com/questions/374752/reattaching-screen-having-irssi-running-forces-window-resize
@@ -90,12 +91,12 @@ screen -ls
 # To close the screen and terminate it. Type at the prompt
 # 'exit'
 
-
-conda install -c anaconda pandas-profiling
-# conda install -c anaconda pymysql  ## This seems to break the environment when installed
-conda install -seaborn
 # not available on conda
-pip install pygeocoder
-conda install -c anaconda configparser
-conda install -c conda-forge yapf
-conda install -c conda-forge dask
+pip install pygeocoder -q
+conda install -c anaconda pandas-profiling -y
+# conda install -c anaconda pymysql  ## This seems to break the environment when installed
+conda install seaborn -y
+
+conda install -c anaconda configparser -y
+conda install -c conda-forge yapf -y
+conda install -c conda-forge dask -y
