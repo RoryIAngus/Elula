@@ -38,10 +38,12 @@ sed -i "s/#c.NotebookApp.notebook_dir = ''/c.NotebookApp.notebook_dir = '\/dltra
 #c.NotebookApp.notebook_dir = '/dltraining'
 
 #conda stuff
-
+# conda install conda-build
+conda update conda-build
 conda update conda
 conda install -c anaconda git
 conda install nb_conda
+conda install nb_conda_kernels  # this is needed to help manage the kernals that I need
 conda install -c conda-forge jupyter_contrib_nbextensions
 conda install -c conda-forge ipywidgets
 # create a environment to leave base default
@@ -89,4 +91,11 @@ screen -ls
 # 'exit'
 
 
-conda install -c anaconda pymysql
+conda install -c anaconda pandas-profiling
+# conda install -c anaconda pymysql  ## This seems to break the environment when installed
+conda install -seaborn
+# not available on conda
+pip install pygeocoder
+conda install -c anaconda configparser
+conda install -c conda-forge yapf
+conda install -c conda-forge dask
